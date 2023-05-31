@@ -18,4 +18,12 @@ $router->get('/', function () use ($router) {
 });
 
 // unsecure routes
-$router->get('/users', 'UserController@getAllUsers');
+
+// $router->get('/users', 'UserController@getAllUsers');
+
+$router->get('/users', 'UserController@index');
+$router->post('/users', 'UserController@add');
+$router->get('/users/{id}', 'UserController@show');
+$router->put('/users/{id}', 'UserController@update');
+$router->delete('/users/{id}', 'UserController@delete');
+
